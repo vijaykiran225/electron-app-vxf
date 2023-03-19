@@ -9,6 +9,9 @@ const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('pipeline', {
     trigger: (command) => ipcRenderer.invoke('command', command),
-    http: (userId) => ipcRenderer.invoke('http', userId)
+    http: (userId) => ipcRenderer.invoke('http', userId),
+    mvnBuild: (path) => ipcRenderer.invoke('mvnBuild', { path: path }),
+    handleMvnResponse: (callback) => ipcRenderer.on('status', callback),
+    fillServices: (path) => ipcRenderer.invoke('fillServices', { path: path })
 
 })
