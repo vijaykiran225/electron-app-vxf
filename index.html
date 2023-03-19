@@ -5,14 +5,14 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
+    <title>Hello !</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
+    <h1>At your service Boss!</h1>
+    <input type="text" id="search">
+    <button id="submit">submit</button>
+     <button id="submitHttp">http</button>
+    <div id="response">op comes here</div>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
